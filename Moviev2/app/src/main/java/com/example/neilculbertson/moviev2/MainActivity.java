@@ -1,6 +1,7 @@
 package com.example.neilculbertson.moviev2;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
@@ -17,6 +18,7 @@ import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class MainActivity extends ActionBarActivity
@@ -48,6 +50,9 @@ public class MainActivity extends ActionBarActivity
     }
 
     public void buttonOnClick(View v){
+        Toast.makeText(this, "Cannot add movies yet", Toast.LENGTH_LONG).show();
+        //Intent intent = new Intent(this, ListTesting.class);
+        //startActivity(intent);
         System.out.println("Clicked button!");
     }
 
@@ -70,6 +75,8 @@ public class MainActivity extends ActionBarActivity
                 break;
             case 3:
                 mTitle = getString(R.string.title_section3);
+                Intent intent = new Intent(this, ListTesting.class);
+                startActivity(intent);
                 break;
             case 4:
                 mTitle = getString(R.string.title_section4);
