@@ -19,6 +19,22 @@
         android:layout_marginBottom="8dp"
         android:visibility="gone" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Welcome to Moomie"
+        android:id="@+id/welcome"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Sign in or create an account"
+        android:id="@+id/sign_in"
+        android:layout_gravity="center_horizontal" />
+
     <ScrollView
         android:id="@+id/login_form"
         android:layout_width="match_parent"
@@ -72,8 +88,31 @@
                 android:text="@string/action_sign_in"
                 android:textStyle="bold" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Or..."
+                android:id="@+id/or"
+                android:layout_gravity="center_horizontal" />
+
             <include layout="@layout/content_main"
                 android:id="@+id/LoginButton" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Or..."
+                android:id="@+id/or2"
+                android:layout_gravity="center_horizontal" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Skip for now"
+                android:id="@+id/skip_button"
+                android:layout_gravity="center_horizontal" />
 
         </LinearLayout>
     </ScrollView>

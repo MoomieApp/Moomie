@@ -3,6 +3,7 @@ package com.example.brianberg.moomie2;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.app.LoaderManager.LoaderCallbacks;
 
@@ -78,6 +79,16 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             @Override
             public void onClick(View view) {
                 attemptLogin();
+            }
+        });
+
+        Button mSkipButton = (Button) findViewById(R.id.skip_button);
+        mSkipButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Start the main Navigation activity when skip is clicked
+                Intent intent = new Intent(getApplicationContext(), MainNavigationActivity.class);
+                startActivity(intent);
             }
         });
 

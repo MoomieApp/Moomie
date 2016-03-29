@@ -54,6 +54,10 @@ public class MainFragment extends Fragment {
             mProfileTracker.startTracking();
             Profile profile = Profile.getCurrentProfile();
             displayWelcomeMessage(profile);
+
+            // Start the main Navigation activity on FACEBOOK success
+            Intent intent = new Intent(getActivity(), MainNavigationActivity.class);
+            startActivity(intent);
         }
 
         @Override
